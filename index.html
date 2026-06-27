@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EZ Elite Detailing</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: #000000;
+    color: #E5E4E2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  .serif { font-family: Georgia, 'Times New Roman', serif; }
+  input::placeholder { color: #6b6b6b; }
+
+  nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 22px 28px; border-bottom: 1px solid #232323;
+  }
+  .logo { font-size: 20px; font-weight: 600; letter-spacing: 0.02em; color: #E5E4E2; }
+  .logo span { color: #C9CACC; }
+  .location { font-size: 13px; color: #9C9C9C; display: flex; gap: 6px; align-items: center; }
+
+  .hero {
+    position: relative; overflow: hidden;
+    padding: 76px 28px 64px; text-align: center;
+    border-bottom: 1px solid #232323;
+  }
+  .sweep {
+    position: absolute; top: 0; left: -40%; width: 40%; height: 100%;
+    background: linear-gradient(100deg, transparent, rgba(229,228,226,0.10), rgba(201,202,204,0.07), transparent);
+    transform: skewX(-12deg);
+    transition: left 2400ms cubic-bezier(.2,.7,.2,1);
+    pointer-events: none;
+  }
+  .sweep.go { left: 120%; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 12px; letter-spacing: 0.12em; color: #C9CACC; text-transform: uppercase;
+    border: 1px solid #2E2E2E; border-radius: 999px; padding: 6px 14px; margin-bottom: 26px;
+  }
+  h1.serif {
+    font-size: clamp(32px, 6vw, 56px); line-height: 1.1; font-weight: 500;
+    max-width: 760px; margin: 0 auto 20px; color: #E5E4E2;
+  }
+  .hero p {
+    color: #9C9C9C; font-size: 17px; max-width: 480px; margin: 0 auto 40px; line-height: 1.6;
+  }
+  .cta {
+    display: inline-block; background: #E5E4E2; color: #000000; font-weight: 600;
+    padding: 14px 34px; border-radius: 8px; text-decoration: none; font-size: 15px;
+    box-shadow: 0 8px 30px -8px rgba(229,228,226,0.35);
+  }
+
+  .service-section { padding: 64px 28px; max-width: 880px; margin: 0 auto; }
+  .service-header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 28px; flex-wrap: wrap; gap: 12px;
+  }
+  .service-header h2 { font-size: 30px; font-weight: 500; color: #E5E4E2; }
+  .service-meta { display: flex; align-items: center; gap: 18px; color: #9C9C9C; font-size: 14px; }
+  .service-meta .price { font-size: 26px; color: #E5E4E2; font-weight: 600; font-family: Georgia, serif; }
+
+  .service-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px 32px; background: #0D0D0D; border: 1px solid #232323; border-radius: 14px; padding: 30px 32px;
+  }
+  .service-item {
+    display: flex; gap: 10px; align-items: flex-start; font-size: 14.5px; color: #C9C9C9; line-height: 1.5;
+    opacity: 0; transform: translateY(14px); transition: opacity 700ms ease, transform 700ms cubic-bezier(.2,.7,.2,1);
+  }
+  .service-item.visible { opacity: 1; transform: translateY(0); }
+  .check { color: #C9CACC; flex-shrink: 0; margin-top: 2px; }
+  .note { color: #9C9C9C; font-size: 13.5px; margin-top: 20px; line-height: 1.6; }
+
+  .book-section { padding: 20px 28px 100px; max-width: 520px; margin: 0 auto; }
+  .book-card { background: #0D0D0D; border: 1px solid #232323; border-radius: 16px; padding: 36px; }
+  .book-card h3.serif { font-size: 22px; margin-bottom: 6px; font-weight: 500; color: #E5E4E2; }
+  .book-card .sub { color: #9C9C9C; font-size: 13.5px; margin-bottom: 24px; }
+  label { display: block; margin-bottom: 16px; }
+  label span { display: block; font-size: 12.5px; color: #9C9C9C; margin-bottom: 6px; }
+  input {
+    width: 100%; background: #000000; border: 1px solid #2E2E2E; border-radius: 8px;
+    padding: 11px 13px; color: #E5E4E2; font-size: 14.5px; outline: none;
+    font-family: inherit;
+  }
+  input:focus { border-color: #C9CACC; }
+  button[type=submit] {
+    width: 100%; margin-top: 8px; background: #E5E4E2; color: #000000; font-weight: 600;
+    border: none; border-radius: 8px; padding: 14px 0; font-size: 15px; cursor: pointer;
+    font-family: inherit;
+  }
+
+  .confirmed { text-align: center; padding: 10px 0; display: none; }
+  .confirmed.show { display: block; }
+  .confirmed .icon-circle {
+    width: 52px; height: 52px; border-radius: 50%; background: rgba(229,228,226,0.10);
+    display: flex; align-items: center; justify-content: center; margin: 0 auto 18px;
+    color: #E5E4E2;
+  }
+  .confirmed h3.serif { font-size: 22px; margin-bottom: 8px; color: #E5E4E2; }
+  .confirmed p { color: #9C9C9C; font-size: 14px; line-height: 1.6; }
+
+  footer {
+    border-top: 1px solid #232323; padding: 24px 28px; text-align: center;
+    color: #6b6b6b; font-size: 12.5px;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">EZ <span>Elite</span> Detailing</div>
+  <div class="location">📍 Flushing &amp; all of Queens</div>
+</nav>
+
+<section class="hero">
+  <div class="sweep" id="sweep"></div>
+  <div class="badge">✨ Mobile detailing, at your curb</div>
+  <h1 class="serif">A clean reflection<br>says it for you.</h1>
+  <p>We come to your driveway with everything we need. You get a single, honest service done right — no upsell maze, no surprises.</p>
+  <a href="#book" class="cta">Book the Essential Detail — $180</a>
+</section>
+
+<section class="service-section">
+  <div class="service-header">
+    <h2 class="serif">The Essential Detail</h2>
+    <div class="service-meta">
+      <span>⏱ ~2–2.5 hrs</span>
+      <span class="price">$180</span>
+    </div>
+  </div>
+
+  <div class="service-grid" id="serviceGrid"></div>
+
+  <p class="note">Signature and Elite tiers — paint correction, ceramic protection — are coming soon as we grow. Right now, every job gets our full attention on one service, done well.</p>
+</section>
+
+<section class="book-section" id="book">
+  <div class="book-card">
+    <form id="bookingForm">
+      <h3 class="serif">Reserve your spot</h3>
+      <p class="sub">We'll text you to confirm a time. No payment due now.</p>
+      <label><span>Name</span><input required id="f-name" placeholder="Jane Rivera" /></label>
+      <label><span>Phone</span><input required id="f-phone" type="tel" placeholder="(555) 555-0123" /></label>
+      <label><span>Vehicle</span><input required id="f-vehicle" placeholder="2021 Honda CR-V" /></label>
+      <label><span>Address</span><input required id="f-address" placeholder="Street, Flushing NY" /></label>
+      <button type="submit">Request booking</button>
+    </form>
+    <div class="confirmed" id="confirmed">
+      <div class="icon-circle">✓</div>
+      <h3 class="serif">Request sent</h3>
+      <p id="confirmedText">We'll text you shortly to lock in a time.</p>
+    </div>
+  </div>
+</section>
+
+<footer>EZ Elite Detailing · Flushing, NY · Mobile service across Queens</footer>
+
+<script>
+  var included = [
+    "Hand wash — foam pre-wash, two-bucket method",
+    "Wheels, tires & tire dressing",
+    "Exterior glass, cleaned streak-free",
+    "Door jambs wiped down",
+    "Spray sealant for a clean, protected finish",
+    "Full interior vacuum — seats, carpet, mats, trunk",
+    "Dash, console & door panels wiped down",
+    "Interior glass, cleaned streak-free",
+    "Cupholders & vents detailed",
+    "Carpet shampoo — stains and ground-in soil lifted"
+  ];
+
+  var grid = document.getElementById('serviceGrid');
+  included.forEach(function(item, i) {
+    var div = document.createElement('div');
+    div.className = 'service-item';
+    div.style.transitionDelay = (i * 40) + 'ms';
+    div.innerHTML = '<span class="check">✓</span><span>' + item + '</span>';
+    grid.appendChild(div);
+  });
+
+  setTimeout(function() {
+    document.getElementById('sweep').classList.add('go');
+  }, 400);
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.service-item').forEach(function(el) {
+    observer.observe(el);
+  });
+
+  document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var name = document.getElementById('f-name').value;
+    var vehicle = document.getElementById('f-vehicle').value;
+    var firstName = name.split(' ')[0] || 'you';
+    document.getElementById('confirmedText').textContent =
+      "We'll text " + firstName + " shortly to lock in a time for the " + (vehicle || 'vehicle') + ".";
+    document.getElementById('bookingForm').style.display = 'none';
+    document.getElementById('confirmed').classList.add('show');
+  });
+</script>
+
+</body>
+</html>
