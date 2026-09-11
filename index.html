@@ -1243,3 +1243,1257 @@ document.addEventListener('click', function(e) {
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ============================================================
+     SEO — Primary
+     ============================================================ -->
+<title>EZ Elite Detailing | Mobile Car Detailing Queens NY</title>
+<meta name="description" content="Professional mobile car detailing in Queens, NY. EZ Elite Detailing brings premium interior and exterior detailing directly to your home. Get your personalized quote today." />
+<link rel="canonical" href="https://ezelitedetailing.com/" />
+
+<!-- ============================================================
+     Open Graph
+     ============================================================ -->
+<meta property="og:type"        content="website" />
+<meta property="og:url"         content="https://ezelitedetailing.com/" />
+<meta property="og:title"       content="EZ Elite Detailing | Mobile Car Detailing Queens NY" />
+<meta property="og:description" content="Professional mobile car detailing in Queens, NY. Premium interior and exterior detailing brought directly to your home. Get your personalized quote today." />
+<!-- TODO: Add og:image once you have a branded photo -->
+<!-- <meta property="og:image" content="https://ezelitedetailing.com/og-image.jpg" /> -->
+
+<!-- ============================================================
+     Favicon placeholder
+     TODO: Add your favicon once designed
+     ============================================================ -->
+<!-- <link rel="icon" href="/favicon.ico" /> -->
+<!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> -->
+
+<!-- ============================================================
+     Schema.org Structured Data — LocalBusiness / AutoDetailing
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AutoRepair"],
+  "name": "EZ Elite Detailing",
+  "description": "Premium mobile auto detailing service in Queens, NY. We bring professional interior and exterior detailing directly to your home or driveway.",
+  "url": "https://ezelitedetailing.com/",
+  "telephone": "+19292705239",
+  "priceRange": "$$",
+  "areaServed": {
+    "@type": "City",
+    "name": "Queens",
+    "addressRegion": "NY",
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://instagram.com/ezelitedetailing"
+  ],
+  "serviceType": ["Mobile Auto Detailing", "Interior Detailing", "Exterior Detailing"],
+  "slogan": "Driven by Pride. Defined by Detail."
+}
+</script>
+
+<!-- ============================================================
+     Fonts
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root {
+  --black:   #000000;
+  --panel:   #0A0A0A;
+  --panel2:  #111111;
+  --border:  #1C1C1C;
+  --border2: #2A2A2A;
+  --platinum:#E5E4E2;
+  --silver:  #A8A9AD;
+  --chrome:  #C8C9CC;
+  --dim:     #6B6B6B;
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--black);
+  color: var(--platinum);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px; line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+h1,h2,h3,h4 { font-family: 'Playfair Display', Georgia, serif; font-weight: 500; line-height: 1.15; }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+input, select, textarea, button { font-family: inherit; }
+
+/* ============================================================
+   NAV
+   ============================================================ */
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 32px; height: 64px;
+  background: rgba(0,0,0,0.90);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600; letter-spacing: 0.04em; }
+.nav-logo span { color: var(--chrome); }
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--silver); transition: color 200ms; }
+.nav-links a:hover { color: var(--platinum); }
+.nav-instagram { display: flex; align-items: center; color: var(--silver); transition: color 200ms; }
+.nav-instagram:hover { color: var(--platinum); }
+.nav-cta { background: var(--platinum); color: var(--black); padding: 9px 20px; border-radius: 6px; font-size: 12px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; transition: opacity 200ms; white-space: nowrap; display: inline-block; }
+.nav-cta:hover { opacity: 0.85; }
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
+.nav-hamburger span { display: block; width: 22px; height: 1.5px; background: var(--platinum); border-radius: 2px; }
+.mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--black); border-bottom: 1px solid var(--border); z-index: 99; padding: 16px 28px; }
+.mobile-menu.open { display: block; }
+.mobile-menu a { display: block; padding: 14px 0; font-size: 15px; font-weight: 500; color: var(--silver); border-bottom: 1px solid var(--border); }
+.mobile-menu a:last-child { border-bottom: none; }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+#hero { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 32px 80px; overflow: hidden; }
+/* TODO: Replace hero image URL below with your own EZ Elite photo */
+.hero-bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1619405399517-d7fce0f13302?w=1800&q=80') center/cover no-repeat; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.94) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.22) 100%); }
+.hero-content { position: relative; z-index: 2; max-width: 720px; opacity: 0; transform: translateY(20px); animation: heroIn 800ms cubic-bezier(.2,.7,.2,1) 150ms forwards; }
+@keyframes heroIn { to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .hero-content { animation: none; opacity: 1; transform: none; } }
+.hero-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--chrome); margin-bottom: 18px; }
+#hero h1 { font-size: clamp(40px, 8vw, 80px); line-height: 1.0; margin-bottom: 14px; }
+.hero-sub { font-size: clamp(18px, 2.5vw, 24px); color: var(--chrome); font-weight: 300; margin-bottom: 8px; }
+.hero-tagline { font-size: 15px; color: var(--silver); font-style: italic; font-family: 'Playfair Display', serif; margin-bottom: 10px; }
+.hero-location { font-size: 13px; color: var(--dim); margin-bottom: 32px; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 20px; }
+.hero-contact { display: flex; gap: 16px; flex-wrap: wrap; }
+.hero-contact a { font-size: 13px; color: var(--silver); transition: color 200ms; }
+.hero-contact a:hover { color: var(--chrome); }
+.hero-contact a strong { font-weight: 500; color: var(--chrome); }
+
+/* Buttons */
+.btn-primary { background: var(--platinum); color: var(--black); padding: 15px 28px; border-radius: 7px; font-size: 13px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; border: none; cursor: pointer; transition: opacity 200ms; display: inline-block; text-align: center; }
+.btn-primary:hover { opacity: 0.87; }
+.btn-outline { background: transparent; color: var(--platinum); padding: 14px 24px; border-radius: 7px; font-size: 13px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; border: 1px solid rgba(229,228,226,0.35); cursor: pointer; transition: border-color 200ms; display: inline-block; text-align: center; }
+.btn-outline:hover { border-color: var(--platinum); }
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+section { padding: 88px 32px; }
+.section-inner { max-width: 1080px; margin: 0 auto; }
+.section-label { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--dim); margin-bottom: 14px; }
+.section-rule { width: 36px; height: 1px; background: var(--chrome); margin: 18px 0 48px; }
+
+/* ============================================================
+   INTRO
+   ============================================================ */
+#intro { background: var(--panel); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+#intro h2 { font-size: clamp(26px, 4vw, 42px); max-width: 640px; margin-bottom: 24px; }
+#intro p { font-size: 16px; color: var(--silver); max-width: 560px; line-height: 1.8; margin-bottom: 14px; }
+#intro p:last-child { margin-bottom: 0; }
+#intro strong { color: var(--platinum); font-weight: 500; }
+
+/* ============================================================
+   SERVICES
+   ============================================================ */
+#services { background: var(--black); }
+#services h2 { font-size: clamp(26px, 4vw, 42px); }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--border); margin-top: 48px; }
+.service-card { background: var(--panel); padding: 36px 30px; border-right: 1px solid var(--border); position: relative; }
+.service-card:last-child { border-right: none; }
+.service-card h3 { font-size: 20px; margin-bottom: 10px; }
+.service-card > p { font-size: 13.5px; color: var(--silver); margin-bottom: 22px; line-height: 1.65; }
+.service-includes { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dim); margin-bottom: 12px; }
+.service-list { list-style: none; }
+.service-list li { font-size: 13px; color: var(--chrome); padding: 5px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; align-items: flex-start; }
+.service-list li:last-child { border-bottom: none; }
+.service-list li::before { content: '—'; color: var(--dim); flex-shrink: 0; }
+.service-badge { position: absolute; top: 18px; right: 18px; font-size: 10px; font-weight: 600; letter-spacing: 0.10em; text-transform: uppercase; color: var(--silver); background: var(--panel2); border: 1px solid var(--border2); padding: 4px 10px; border-radius: 99px; }
+.service-time { font-size: 12px; color: var(--dim); margin-top: 18px; font-style: italic; }
+
+/* ============================================================
+   ADD-ONS
+   ============================================================ */
+#addons { background: var(--panel); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+#addons h2 { font-size: clamp(24px, 4vw, 38px); }
+.addon-sub { color: var(--silver); margin-bottom: 40px; font-size: 15px; }
+.addons-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.addon-card { background: var(--black); border: 1px solid var(--border2); border-radius: 10px; padding: 28px 24px; display: flex; flex-direction: column; }
+.addon-card h3 { font-size: 18px; margin-bottom: 8px; }
+.addon-card p { font-size: 14px; color: var(--silver); line-height: 1.65; flex: 1; margin-bottom: 20px; }
+.addon-price { font-family: 'Playfair Display', serif; font-size: 30px; color: var(--chrome); }
+.addon-note { font-size: 12px; color: var(--dim); margin-top: 8px; }
+
+/* ============================================================
+   WHY
+   ============================================================ */
+#why { background: var(--black); }
+#why h2 { font-size: clamp(26px, 4vw, 42px); max-width: 520px; }
+.why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 32px; }
+.why-item { border-top: 1px solid var(--border2); padding-top: 22px; }
+.why-item h3 { font-size: 16px; margin-bottom: 8px; }
+.why-item p { font-size: 13.5px; color: var(--silver); line-height: 1.7; }
+.why-closing { margin-top: 56px; padding-top: 36px; border-top: 1px solid var(--border); font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(18px, 3vw, 28px); color: var(--chrome); }
+
+/* ============================================================
+   PROCESS
+   ============================================================ */
+#process { background: var(--panel); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+#process h2 { font-size: clamp(24px, 4vw, 38px); }
+.process-steps { display: grid; grid-template-columns: repeat(4, 1fr); }
+.process-step { padding-right: 32px; border-right: 1px solid var(--border); }
+.process-step:last-child { border-right: none; padding-right: 0; }
+.step-num { font-family: 'Playfair Display', serif; font-size: 40px; color: var(--border2); line-height: 1; margin-bottom: 14px; }
+.process-step h3 { font-size: 15px; margin-bottom: 8px; }
+.process-step p { font-size: 13px; color: var(--silver); line-height: 1.65; }
+
+/* ============================================================
+   LUXURY
+   ============================================================ */
+#luxury { background: var(--black); text-align: center; padding: 80px 32px; }
+#luxury h2 { font-size: clamp(22px, 4vw, 36px); margin-bottom: 14px; }
+#luxury > .section-inner > p { color: var(--silver); font-size: 15px; max-width: 480px; margin: 0 auto 32px; }
+.brands-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 14px; max-width: 640px; margin: 0 auto 20px; }
+.brand-tag { font-size: 12px; color: var(--dim); letter-spacing: 0.08em; padding: 6px 14px; border: 1px solid var(--border2); border-radius: 99px; }
+.luxury-closing { font-family: 'Playfair Display', serif; font-style: italic; font-size: 17px; color: var(--chrome); margin-top: 24px; }
+
+/* ============================================================
+   QUOTE CALCULATOR
+   ============================================================ */
+#quote { background: var(--panel); border-top: 1px solid var(--border); }
+#quote h2 { font-size: clamp(26px, 4vw, 42px); }
+.quote-sub { color: var(--silver); margin-bottom: 40px; font-size: 15px; max-width: 460px; }
+.quote-card { background: var(--black); border: 1px solid var(--border2); border-radius: 12px; padding: 36px; max-width: 580px; }
+
+/* Progress */
+.q-progress { display: flex; gap: 6px; margin-bottom: 30px; }
+.q-dot { flex: 1; height: 2px; background: var(--border2); border-radius: 2px; transition: background 300ms; }
+.q-dot.done { background: var(--chrome); }
+.q-dot.active { background: var(--platinum); }
+
+/* Steps */
+.q-step { display: none; }
+.q-step.active { display: block; }
+.q-step-label { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--dim); margin-bottom: 16px; }
+.q-step h3 { font-size: 19px; margin-bottom: 20px; font-family: 'Playfair Display', serif; }
+
+/* Options */
+.q-options { display: flex; flex-direction: column; gap: 8px; }
+.q-option { display: flex; align-items: center; padding: 13px 16px; background: var(--panel); border: 1px solid var(--border2); border-radius: 8px; cursor: pointer; transition: border-color 200ms, background 200ms; gap: 12px; }
+.q-option:hover, .q-option:focus { border-color: var(--chrome); outline: none; }
+.q-option.selected { border-color: var(--platinum); background: #0E0E0E; }
+.q-option-label { font-size: 14px; color: var(--platinum); font-weight: 500; }
+.q-option-hint { font-size: 12px; color: var(--dim); margin-top: 2px; }
+
+/* Checkboxes */
+.q-checkbox-group { display: flex; flex-direction: column; gap: 8px; }
+.q-checkbox { display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px; background: var(--panel); border: 1px solid var(--border2); border-radius: 8px; cursor: pointer; transition: border-color 200ms; }
+.q-checkbox:hover { border-color: var(--chrome); }
+.q-checkbox.selected { border-color: var(--platinum); }
+.q-checkbox input[type=checkbox] { width: 16px; height: 16px; margin-top: 2px; accent-color: var(--platinum); flex-shrink: 0; pointer-events: none; }
+.q-checkbox-body { flex: 1; }
+.q-checkbox-title { font-size: 14px; color: var(--platinum); font-weight: 500; }
+.q-checkbox-desc { font-size: 12px; color: var(--silver); margin-top: 2px; line-height: 1.45; }
+.q-checkbox-price { font-size: 14px; color: var(--chrome); font-weight: 600; white-space: nowrap; padding-top: 2px; }
+
+/* Contact */
+.contact-section h3 { font-size: 18px; margin-bottom: 6px; font-family: 'Playfair Display', serif; }
+.contact-intro { font-size: 14px; color: var(--silver); margin-bottom: 22px; line-height: 1.6; }
+.contact-fields { display: flex; flex-direction: column; gap: 14px; margin-bottom: 20px; }
+.cf-label { display: block; font-size: 11px; color: var(--silver); margin-bottom: 6px; letter-spacing: 0.08em; text-transform: uppercase; }
+.cf-input { width: 100%; background: var(--panel); border: 1px solid var(--border2); border-radius: 8px; padding: 13px 14px; color: var(--platinum); font-size: 15px; outline: none; }
+.cf-input:focus { border-color: var(--chrome); }
+.cf-input::placeholder { color: var(--dim); }
+.contact-privacy { font-size: 11.5px; color: var(--dim); text-align: center; line-height: 1.5; margin-top: 12px; }
+
+/* Quote result */
+.quote-result { display: none; }
+.quote-result.show { display: block; }
+.quote-result-header { text-align: center; margin-bottom: 24px; }
+.quote-result-title { font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--dim); margin-bottom: 10px; }
+.quote-result-amount { font-family: 'Playfair Display', serif; font-size: 64px; color: var(--platinum); line-height: 1; margin-bottom: 4px; }
+.quote-result-sub { font-size: 13px; color: var(--silver); margin-bottom: 4px; }
+.quote-result-disclaimer { font-size: 11.5px; color: var(--dim); font-style: italic; }
+.quote-breakdown { background: var(--panel); border: 1px solid var(--border2); border-radius: 10px; padding: 20px; margin: 20px 0; }
+.breakdown-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13.5px; color: var(--chrome); gap: 12px; }
+.breakdown-row:last-child { border-bottom: none; }
+.breakdown-row.total-row { font-weight: 600; color: var(--platinum); font-size: 15px; }
+.breakdown-label { flex: 1; }
+.breakdown-value { white-space: nowrap; }
+.condition-note { font-size: 12px; color: var(--dim); margin-top: 12px; line-height: 1.6; font-style: italic; }
+
+/* Action buttons */
+.quote-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 24px; }
+.btn-book-sms { width: 100%; background: var(--platinum); color: var(--black); padding: 16px; border-radius: 8px; font-size: 14px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; border: none; cursor: pointer; text-align: center; display: block; transition: opacity 200ms; }
+.btn-book-sms:hover { opacity: 0.87; }
+.quote-secondary-actions { display: flex; gap: 10px; }
+.btn-action-alt { flex: 1; background: transparent; color: var(--silver); padding: 13px 10px; border-radius: 8px; font-size: 13px; font-weight: 500; letter-spacing: 0.04em; border: 1px solid var(--border2); cursor: pointer; text-align: center; display: block; transition: border-color 200ms, color 200ms; }
+.btn-action-alt:hover { border-color: var(--chrome); color: var(--platinum); }
+.btn-restart { width: 100%; background: transparent; color: var(--dim); padding: 12px; border-radius: 8px; font-size: 12px; font-weight: 500; border: 1px solid var(--border); cursor: pointer; transition: color 200ms, border-color 200ms; margin-top: 10px; text-align: center; display: block; }
+.btn-restart:hover { color: var(--silver); border-color: var(--border2); }
+
+/* Nav buttons */
+.q-nav { display: flex; gap: 10px; margin-top: 22px; }
+.btn-next { flex: 1; background: var(--platinum); color: var(--black); padding: 14px; border-radius: 8px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; border: none; cursor: pointer; transition: opacity 200ms; }
+.btn-next:hover { opacity: 0.87; }
+.btn-back { background: transparent; color: var(--silver); padding: 14px 18px; border-radius: 8px; font-size: 13px; font-weight: 500; border: 1px solid var(--border2); cursor: pointer; transition: border-color 200ms, color 200ms; }
+.btn-back:hover { border-color: var(--chrome); color: var(--platinum); }
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+#faq { background: var(--black); }
+#faq h2 { font-size: clamp(26px, 4vw, 42px); }
+.faq-list { max-width: 700px; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-btn { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; cursor: pointer; gap: 16px; width: 100%; background: none; border: none; text-align: left; }
+.faq-btn:focus-visible { outline: 2px solid var(--chrome); outline-offset: 2px; border-radius: 4px; }
+.faq-q-text { font-size: 15px; font-weight: 500; color: var(--platinum); line-height: 1.4; }
+.faq-icon { font-size: 20px; color: var(--silver); flex-shrink: 0; transition: transform 250ms; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a { display: none; padding: 0 0 20px; }
+.faq-item.open .faq-a { display: block; }
+.faq-a p { font-size: 14px; color: var(--silver); line-height: 1.75; }
+.faq-a a { color: var(--chrome); }
+
+/* ============================================================
+   CTA
+   ============================================================ */
+#cta { background: var(--panel); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 88px 32px; text-align: center; }
+#cta h2 { font-size: clamp(26px, 5vw, 52px); max-width: 580px; margin: 0 auto 14px; }
+#cta > p { color: var(--silver); font-size: 16px; margin-bottom: 36px; }
+.cta-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 32px; }
+.cta-contact { display: flex; flex-direction: column; gap: 6px; align-items: center; }
+.cta-phone { font-family: 'Playfair Display', serif; font-size: 28px; color: var(--chrome); }
+.cta-phone a { color: inherit; }
+.cta-contact-links { display: flex; gap: 20px; font-size: 13px; color: var(--dim); }
+.cta-contact-links a { color: var(--silver); transition: color 200ms; }
+.cta-contact-links a:hover { color: var(--platinum); }
+.cta-tagline { margin-top: 28px; font-family: 'Playfair Display', serif; font-style: italic; font-size: 18px; color: var(--chrome); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer { background: var(--black); border-top: 1px solid var(--border); padding: 52px 32px 96px; }
+.footer-inner { max-width: 1080px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px; justify-content: space-between; align-items: flex-start; }
+.footer-brand .logo-text { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; color: var(--platinum); margin-bottom: 6px; }
+.footer-brand .logo-text span { color: var(--chrome); }
+.footer-brand p { font-size: 13px; color: var(--dim); margin-bottom: 2px; }
+.footer-links { display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 13px; color: var(--silver); transition: color 200ms; }
+.footer-links a:hover { color: var(--platinum); }
+.footer-contact { font-size: 13px; color: var(--silver); line-height: 2.1; }
+.footer-contact a { color: var(--chrome); }
+.footer-bottom { max-width: 1080px; margin: 36px auto 0; border-top: 1px solid var(--border); padding-top: 22px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.footer-bottom p { font-size: 12px; color: var(--dim); }
+.footer-tagline { font-size: 12px; color: var(--dim); font-style: italic; font-family: 'Playfair Display', serif; }
+
+/* ============================================================
+   MOBILE STICKY BAR
+   ============================================================ */
+.mobile-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 99; background: var(--black); border-top: 1px solid var(--border); padding: 12px 16px; gap: 10px; }
+.mobile-bar a { flex: 1; text-align: center; padding: 14px 10px; border-radius: 8px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; display: block; }
+.m-call { background: transparent; color: var(--platinum); border: 1px solid var(--border2); }
+.m-quote { background: var(--platinum); color: var(--black); border: none; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .service-card { border-right: none; border-bottom: 1px solid var(--border); }
+  .service-card:last-child { border-bottom: none; }
+  .process-steps { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .process-step { border-right: none; padding-right: 0; border-bottom: 1px solid var(--border); padding-bottom: 28px; }
+  .process-step:last-child, .process-step:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+}
+@media (max-width: 768px) {
+  section { padding: 60px 20px; }
+  #hero { padding: 0 20px 96px; }
+  .nav-links, .nav-cta { display: none; }
+  .nav-hamburger { display: flex; }
+  #nav { padding: 0 20px; }
+  .mobile-bar { display: flex; }
+  footer { padding-bottom: 100px; }
+  .quote-card { padding: 24px 18px; }
+  .process-steps { grid-template-columns: 1fr; }
+  .process-step { border-bottom: 1px solid var(--border); padding-bottom: 24px; padding-right: 0; border-right: none; }
+  .process-step:last-child { border-bottom: none; }
+  .quote-secondary-actions { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-logo">EZ <span>Elite</span> Detailing</div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">About</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#quote">Get a Quote</a></li>
+  </ul>
+  <a href="https://instagram.com/ezelitedetailing" target="_blank" rel="noopener" class="nav-instagram" aria-label="EZ Elite Detailing on Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+    </svg>
+  </a>
+  <a href="#quote" class="nav-cta">Get a Free Quote</a>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#addons"   onclick="closeMenu()">Add-Ons</a>
+  <a href="#why"      onclick="closeMenu()">About</a>
+  <a href="#faq"      onclick="closeMenu()">FAQ</a>
+  <a href="#quote"    onclick="closeMenu()">Get a Free Quote</a>
+  <a href="tel:9292705239" onclick="closeMenu()">Call 929-270-5239</a>
+  <a href="sms:9292705239" onclick="closeMenu()">Text 929-270-5239</a>
+</div>
+
+<!-- ============================================================
+     HERO
+     TODO: Replace hero image — update the URL in .hero-bg CSS
+     ============================================================ -->
+<section id="hero" role="banner">
+  <div class="hero-bg" role="img" aria-label="Premium vehicle exterior"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Premium Mobile Auto Detailing</p>
+    <h1>EZ Elite<br>Detailing</h1>
+    <p class="hero-sub">We bring the detail to you.</p>
+    <p class="hero-tagline">Driven by Pride. Defined by Detail.</p>
+    <p class="hero-location">Serving Queens, NY &amp; surrounding areas</p>
+    <div class="hero-actions">
+      <a href="#quote" class="btn-primary">Get Your Free Quote</a>
+      <a href="tel:9292705239" class="btn-outline">Call Now</a>
+    </div>
+    <div class="hero-contact">
+      <a href="tel:9292705239"><strong>Call</strong> 929-270-5239</a>
+      <a href="sms:9292705239"><strong>Text</strong> 929-270-5239</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     INTRO
+     ============================================================ -->
+<section id="intro">
+  <div class="section-inner">
+    <p class="section-label">Who We Are</p>
+    <h2>Your car deserves the Elite treatment.</h2>
+    <div class="section-rule"></div>
+    <p>Your vehicle is more than transportation. It's something you <strong>take pride in</strong>.</p>
+    <p>At EZ Elite Detailing, we bring professional mobile detailing directly to your home, driveway, or location — anywhere in Queens and surrounding areas.</p>
+    <p><strong>No waiting rooms. No driving across town. No shortcuts.</strong></p>
+    <p>We come to you — and we take care of every detail.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICES
+     ============================================================ -->
+<section id="services">
+  <div class="section-inner">
+    <p class="section-label">What We Offer</p>
+    <h2>Our Services</h2>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <h3>Exterior Detail</h3>
+        <p>Give your vehicle the clean, glossy finish it deserves — without leaving your driveway.</p>
+        <p class="service-includes">Includes</p>
+        <ul class="service-list">
+          <li>Foam pre-wash</li>
+          <li>Hand wash</li>
+          <li>Wheels &amp; tires cleaned</li>
+          <li>Exterior glass</li>
+          <li>Door jambs</li>
+          <li>Tire dressing</li>
+          <li>Exterior protection / sealant</li>
+        </ul>
+        <p class="service-time">Service time varies depending on vehicle size and condition.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Interior Detail</h3>
+        <p>A deep interior cleaning designed to bring your cabin back to life.</p>
+        <p class="service-includes">Includes</p>
+        <ul class="service-list">
+          <li>Thorough vacuum — seats, carpet &amp; trunk</li>
+          <li>Dash, console &amp; door panels</li>
+          <li>Floor mats</li>
+          <li>Cupholders</li>
+          <li>Vents</li>
+          <li>Interior glass</li>
+          <li>Carpet &amp; upholstery cleaning</li>
+        </ul>
+        <p class="service-time">Service time varies depending on vehicle size and condition.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-badge">Most Popular</div>
+        <h3>Full Detail</h3>
+        <p>The complete EZ Elite experience — interior and exterior, top to bottom.</p>
+        <p class="service-includes">Includes</p>
+        <ul class="service-list">
+          <li>Everything in Exterior Detail</li>
+          <li>Everything in Interior Detail</li>
+          <li>Comprehensive top-to-bottom service</li>
+          <li>Leaves your vehicle refreshed inside and out</li>
+        </ul>
+        <p class="service-time">Service time varies depending on vehicle size and condition.</p>
+      </div>
+
+    </div>
+    <p style="font-size:13px;color:var(--dim);margin-top:18px;">Pricing varies by vehicle size and condition. Use our quote calculator below for your personalized quote.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     ADD-ONS
+     ============================================================ -->
+<section id="addons">
+  <div class="section-inner">
+    <p class="section-label">Extras</p>
+    <h2>Make it even cleaner.</h2>
+    <div class="section-rule"></div>
+    <p class="addon-sub">Add these services to any detail for a more thorough result.</p>
+    <div class="addons-grid">
+      <div class="addon-card">
+        <h3>Pet Hair Removal</h3>
+        <p>Have a vehicle full of dog or cat hair? We use specialized tools and techniques to remove embedded pet hair from seats, carpets, floors, and the trunk.</p>
+        <div class="addon-price">+$65</div>
+      </div>
+      <div class="addon-card">
+        <h3>Heavy Soil Treatment</h3>
+        <p>For vehicles with excessive dirt, staining, buildup, or neglected interiors requiring additional labor and time beyond a standard detail.</p>
+        <div class="addon-price">+$60</div>
+        <p class="addon-note">Additional charges may apply for exceptionally severe conditions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY EZ ELITE
+     ============================================================ -->
+<section id="why">
+  <div class="section-inner">
+    <p class="section-label">Why EZ Elite</p>
+    <h2>Why choose EZ Elite Detailing?</h2>
+    <div class="section-rule"></div>
+    <div class="why-grid">
+      <div class="why-item">
+        <h3>Mobile Convenience</h3>
+        <p>We come directly to you. Your driveway becomes our workspace. No drop-off, no waiting, no extra trip.</p>
+      </div>
+      <div class="why-item">
+        <h3>Attention to Detail</h3>
+        <p>We don't rush through your vehicle. We take the time necessary to do the job properly — every time.</p>
+      </div>
+      <div class="why-item">
+        <h3>Professional Results</h3>
+        <p>Our goal isn't simply to make your vehicle look clean. We want you to notice the difference the moment you see it.</p>
+      </div>
+      <div class="why-item">
+        <h3>Honest Service</h3>
+        <p>Straightforward pricing. Clear communication. No unnecessary upselling or hidden fees.</p>
+      </div>
+    </div>
+    <p class="why-closing">Your vehicle. Our standard.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROCESS
+     ============================================================ -->
+<section id="process">
+  <div class="section-inner">
+    <p class="section-label">How It Works</p>
+    <h2>From your driveway to showroom-ready.</h2>
+    <div class="section-rule"></div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <h3>Get Your Quote</h3>
+        <p>Tell us about your vehicle and select any services or add-ons. Get your personalized quote instantly.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <h3>Choose Your Time</h3>
+        <p>We'll coordinate a convenient appointment that works for your schedule.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <h3>We Come to You</h3>
+        <p>No need to leave your home or rearrange your day. We bring the detailing service to your location.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <h3>Enjoy the Results</h3>
+        <p>Step outside and see the EZ Elite difference for yourself.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     LUXURY VEHICLES
+     ============================================================ -->
+<section id="luxury">
+  <div class="section-inner">
+    <p class="section-label">Every Vehicle</p>
+    <h2>Specializing in vehicles that deserve extra attention.</h2>
+    <p>From daily drivers to luxury vehicles, we treat every vehicle with the same level of care and attention to detail.</p>
+    <div class="brands-row">
+      <span class="brand-tag">BMW</span>
+      <span class="brand-tag">Mercedes-Benz</span>
+      <span class="brand-tag">Audi</span>
+      <span class="brand-tag">Lexus</span>
+      <span class="brand-tag">Porsche</span>
+      <span class="brand-tag">Cadillac</span>
+      <span class="brand-tag">Tesla</span>
+      <span class="brand-tag">And more</span>
+    </div>
+    <p class="luxury-closing">Every vehicle. Every detail. Every time.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     QUOTE CALCULATOR
+     ============================================================ -->
+<section id="quote">
+  <div class="section-inner">
+    <p class="section-label">Get Your Price</p>
+    <h2>Get your personalized quote.</h2>
+    <div class="section-rule"></div>
+    <p class="quote-sub">Tell us about your vehicle and we'll provide your personalized EZ Elite Detailing quote.</p>
+
+    <div class="quote-card" id="quoteCard">
+
+      <div class="q-progress" id="qProgress" aria-label="Quote progress">
+        <div class="q-dot active" id="dot1"></div>
+        <div class="q-dot" id="dot2"></div>
+        <div class="q-dot" id="dot3"></div>
+        <div class="q-dot" id="dot4"></div>
+        <div class="q-dot" id="dot5"></div>
+      </div>
+
+      <!-- Step 1: Vehicle -->
+      <div class="q-step active" id="qs1" role="group" aria-labelledby="qs1-heading">
+        <p class="q-step-label">Step 1 of 5 — Vehicle</p>
+        <h3 id="qs1-heading">What type of vehicle?</h3>
+        <div class="q-options" role="listbox" aria-label="Vehicle type">
+          <div class="q-option" role="option" tabindex="0" onclick="selectVehicle(this,'Sedan / Coupe')" onkeydown="optionKey(event,this,'vehicle','Sedan / Coupe')">
+            <span class="q-option-label">Sedan / Coupe</span>
+          </div>
+          <div class="q-option" role="option" tabindex="0" onclick="selectVehicle(this,'Sports Car')" onkeydown="optionKey(event,this,'vehicle','Sports Car')">
+            <span class="q-option-label">Sports Car</span>
+          </div>
+          <div class="q-option" role="option" tabindex="0" onclick="selectVehicle(this,'Midsize SUV / Crossover')" onkeydown="optionKey(event,this,'vehicle','Midsize SUV / Crossover')">
+            <span class="q-option-label">Midsize SUV / Crossover</span>
+          </div>
+          <div class="q-option" role="option" tabindex="0" onclick="selectVehicle(this,'Full-Size SUV / Minivan')" onkeydown="optionKey(event,this,'vehicle','Full-Size SUV / Minivan')">
+            <span class="q-option-label">Full-Size SUV / Minivan</span>
+          </div>
+          <div class="q-option" role="option" tabindex="0" onclick="selectVehicle(this,'Pickup Truck')" onkeydown="optionKey(event,this,'vehicle','Pickup Truck')">
+            <span class="q-option-label">Pickup Truck</span>
+          </div>
+          <div class="q-option" role="option" tabindex="0" onclick="selectVehicle(this,'Luxury / Specialty Vehicle')" onkeydown="optionKey(event,this,'vehicle','Luxury / Specialty Vehicle')">
+            <span class="q-option-label">Luxury / Specialty Vehicle</span>
+          </div>
+        </div>
+        <div class="q-nav">
+          <button class="btn-next" onclick="goToStep(2)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Service -->
+      <div class="q-step" id="qs2" role="group" aria-labelledby="qs2-heading">
+        <p class="q-step-label">Step 2 of 5 — Service</p>
+        <h3 id="qs2-heading">Which service?</h3>
+        <div class="q-options" role="listbox" aria-label="Service type">
+          <div class="q-option" role="option" tabindex="0" onclick="selectService(this,'Exterior Detail',0)" onkeydown="optionKey(event,this,'service','Exterior Detail',0)">
+            <div>
+              <div class="q-option-label">Exterior Detail</div>
+              <div class="q-option-hint">Hand wash, wheels, glass, sealant</div>
+            </div>
+          </div>
+          <div class="q-option" role="option" tabindex="0" onclick="selectService(this,'Interior Detail',1)" onkeydown="optionKey(event,this,'service','Interior Detail',1)">
+            <div>
+              <div class="q-option-label">Interior Detail</div>
+              <div class="q-option-hint">Full vacuum, surfaces, carpet cleaning</div>
+            </div>
+          </div>
+          <div class="q-option" role="option" tabindex="0" onclick="selectService(this,'Full Detail',2)" onkeydown="optionKey(event,this,'service','Full Detail',2)">
+            <div>
+              <div class="q-option-label">Full Detail</div>
+              <div class="q-option-hint">Complete interior + exterior — most popular</div>
+            </div>
+          </div>
+        </div>
+        <div class="q-nav">
+          <button class="btn-back" onclick="goToStep(1)">← Back</button>
+          <button class="btn-next" onclick="goToStep(3)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Condition -->
+      <div class="q-step" id="qs3" role="group" aria-labelledby="qs3-heading">
+        <p class="q-step-label">Step 3 of 5 — Condition</p>
+        <h3 id="qs3-heading">How would you describe your vehicle's condition?</h3>
+        <div class="q-options" role="listbox" aria-label="Vehicle condition">
+          <div class="q-option" role="option" tabindex="0" onclick="selectCondition(this,'Maintained')" onkeydown="optionKey(event,this,'condition','Maintained')">
+            <div>
+              <div class="q-option-label">Maintained</div>
+              <div class="q-option-hint">Regularly cleaned, light dirt</div>
+            </div>
+          </div>
+          <div class="q-option" role="option" tabindex="0" onclick="selectCondition(this,'Moderate')" onkeydown="optionKey(event,this,'condition','Moderate')">
+            <div>
+              <div class="q-option-label">Moderate</div>
+              <div class="q-option-hint">Visible dirt, debris and normal buildup</div>
+            </div>
+          </div>
+          <div class="q-option" role="option" tabindex="0" onclick="selectCondition(this,'Heavy')" onkeydown="optionKey(event,this,'condition','Heavy')">
+            <div>
+              <div class="q-option-label">Heavy</div>
+              <div class="q-option-hint">Significant buildup, staining or neglected condition</div>
+            </div>
+          </div>
+        </div>
+        <div class="q-nav">
+          <button class="btn-back" onclick="goToStep(2)">← Back</button>
+          <button class="btn-next" onclick="goToStep(4)">Next →</button>
+        </div>
+      </div>
+
+      <!-- Step 4: Add-ons -->
+      <div class="q-step" id="qs4" role="group" aria-labelledby="qs4-heading">
+        <p class="q-step-label">Step 4 of 5 — Add-Ons</p>
+        <h3 id="qs4-heading">Any add-ons? <span style="font-size:14px;color:var(--dim);font-family:'Inter',sans-serif;font-weight:400;">(Optional)</span></h3>
+        <div class="q-checkbox-group">
+          <div class="q-checkbox" onclick="toggleAddon(this,'pet',65)" id="tile-pet">
+            <input type="checkbox" id="cb-pet" aria-label="Pet / Dog Hair Removal +$65" onclick="event.stopPropagation();toggleAddon(this.closest('.q-checkbox'),'pet',65)">
+            <div class="q-checkbox-body">
+              <div class="q-checkbox-title">Pet / Dog Hair Removal</div>
+              <div class="q-checkbox-desc">Specialized extraction from seats, carpet &amp; trunk</div>
+            </div>
+            <div class="q-checkbox-price">+$65</div>
+          </div>
+          <div class="q-checkbox" onclick="toggleAddon(this,'soil',60)" id="tile-soil">
+            <input type="checkbox" id="cb-soil" aria-label="Heavy Soil Treatment +$60" onclick="event.stopPropagation();toggleAddon(this.closest('.q-checkbox'),'soil',60)">
+            <div class="q-checkbox-body">
+              <div class="q-checkbox-title">Heavy Soil Treatment</div>
+              <div class="q-checkbox-desc">For excessive dirt, staining, or buildup requiring additional labor</div>
+            </div>
+            <div class="q-checkbox-price">+$60</div>
+          </div>
+        </div>
+        <div class="q-nav">
+          <button class="btn-back" onclick="goToStep(3)">← Back</button>
+          <button class="btn-next" onclick="goToStep(5)">Continue →</button>
+        </div>
+      </div>
+
+      <!-- Step 5: Contact then quote reveal -->
+      <div class="q-step" id="qs5">
+        <p class="q-step-label">Step 5 of 5 — Your Quote</p>
+
+        <!-- Contact form — shown first -->
+        <div id="contactForm">
+          <h3>Your quote is ready.</h3>
+          <p class="contact-intro">Enter your information below to view your personalized EZ Elite Detailing quote.</p>
+          <div class="contact-fields">
+            <div>
+              <label class="cf-label" for="cf-name">Full Name</label>
+              <input class="cf-input" id="cf-name" type="text" placeholder="Jane Rivera" autocomplete="name" />
+            </div>
+            <div>
+              <label class="cf-label" for="cf-phone">Mobile Number</label>
+              <input class="cf-input" id="cf-phone" type="tel" placeholder="(929) 000-0000" autocomplete="tel" />
+            </div>
+          </div>
+          <button class="btn-next" style="width:100%;" onclick="revealQuote()">Get My Quote</button>
+          <p class="contact-privacy">Your information will only be used to contact you regarding your EZ Elite Detailing quote and service.</p>
+          <div class="q-nav" style="margin-top:16px;">
+            <button class="btn-back" style="width:100%;" onclick="goToStep(4)">← Back</button>
+          </div>
+        </div>
+
+        <!-- Quote result — hidden until name + phone submitted -->
+        <div class="quote-result" id="quoteResult" aria-live="polite">
+          <div class="quote-result-header">
+            <div class="quote-result-title">Your EZ Elite Quote</div>
+            <div class="quote-result-amount" id="qTotal">$0</div>
+            <div class="quote-result-sub" id="qSub"></div>
+            <div class="quote-result-disclaimer">Final pricing is subject to vehicle condition upon inspection.</div>
+          </div>
+
+          <div class="quote-breakdown" id="qBreakdown"></div>
+
+          <div class="quote-actions">
+            <!-- Book via SMS — pre-filled message built dynamically in JS -->
+            <a id="btnBookSMS" href="#" class="btn-book-sms">Book Your Detail</a>
+            <div class="quote-secondary-actions">
+              <a href="tel:9292705239" class="btn-action-alt">Call 929-270-5239</a>
+              <a id="btnTextAlt" href="sms:9292705239" class="btn-action-alt">Text 929-270-5239</a>
+            </div>
+          </div>
+
+          <button class="btn-restart" onclick="restartQuote()">Start a new quote</button>
+        </div>
+
+      </div>
+      <!-- /.q-step#qs5 -->
+
+    </div><!-- /.quote-card -->
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
+<section id="faq">
+  <div class="section-inner">
+    <p class="section-label">Questions</p>
+    <h2>Frequently asked questions</h2>
+    <div class="section-rule"></div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-text">Do you come to my home?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" role="region">
+          <p>Yes. EZ Elite Detailing is a mobile detailing service. We come directly to your location throughout Queens and surrounding areas.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-text">How long does a detail take?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" role="region">
+          <p>Service time varies depending on your vehicle's size and condition. We'll give you a more specific estimate when you book.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-text">Do I need to bring my vehicle anywhere?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" role="region">
+          <p>No. That's the convenience of mobile detailing. We come to you — your driveway becomes our workspace.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-text">Do you detail SUVs and larger vehicles?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" role="region">
+          <p>Yes. We detail sedans, coupes, sports cars, SUVs, trucks, minivans, and luxury vehicles. Pricing varies by vehicle — use the quote calculator for your personalized quote.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-text">Do you remove pet hair?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" role="region">
+          <p>Yes. Pet hair removal is available as an add-on (+$65) using specialized tools to extract embedded hair from seats, carpet, and the trunk.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-text">What if my vehicle is extremely dirty?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" role="region">
+          <p>That's okay. Let us know the condition when requesting your quote. Vehicles with excessive dirt, staining, or buildup may require a Heavy Soil Treatment add-on (+$60). Final pricing is subject to vehicle condition upon inspection.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-text">Do you offer ceramic coating or paint correction?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" role="region">
+          <p>Not at this time. We're focused on delivering excellent interior and exterior detailing. Additional specialty services may be added as EZ Elite grows.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)" aria-expanded="false">
+          <span class="faq-q-text">How do I book?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-a" role="region">
+          <p>Use the quote calculator on this page, then tap <strong>Book Your Detail</strong> to send us a message. Or call / text us directly at <a href="tel:9292705239">929-270-5239</a>.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA
+     ============================================================ -->
+<section id="cta">
+  <div class="section-inner">
+    <h2>Ready to make your car look its best?</h2>
+    <p>Don't settle for an ordinary car wash. Experience the difference of professional mobile detailing brought directly to you.</p>
+    <div class="cta-actions">
+      <a href="#quote" class="btn-primary">Get Your Free Quote</a>
+      <a href="tel:9292705239" class="btn-outline">Call Now</a>
+    </div>
+    <div class="cta-contact">
+      <div class="cta-phone"><a href="tel:9292705239">929-270-5239</a></div>
+      <div class="cta-contact-links">
+        <a href="tel:9292705239">Call</a>
+        <a href="sms:9292705239">Text</a>
+        <a href="https://instagram.com/ezelitedetailing" target="_blank" rel="noopener">@EZELITEDETAILING</a>
+      </div>
+    </div>
+    <p class="cta-tagline">Driven by Pride. Defined by Detail.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo-text">EZ <span>Elite</span> Detailing</div>
+      <p>Premium Mobile Auto Detailing</p>
+      <p>Queens, NY &amp; surrounding areas</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer links">
+      <a href="#services">Services</a>
+      <a href="#addons">Add-Ons</a>
+      <a href="#why">About</a>
+      <a href="#process">How It Works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#quote">Get a Quote</a>
+    </nav>
+    <div class="footer-contact">
+      <a href="tel:9292705239">929-270-5239</a><br>
+      <a href="sms:9292705239">Text 929-270-5239</a><br>
+      <a href="https://instagram.com/ezelitedetailing" target="_blank" rel="noopener">@EZELITEDETAILING</a><br>
+      Queens, NY
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; EZ Elite Detailing. All Rights Reserved.</p>
+    <p class="footer-tagline">Driven by Pride. Defined by Detail.</p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     MOBILE STICKY BAR
+     ============================================================ -->
+<div class="mobile-bar" role="complementary" aria-label="Quick contact">
+  <a href="tel:9292705239" class="m-call">Call Now</a>
+  <a href="#quote" class="m-quote">Get a Quote</a>
+</div>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+'use strict';
+
+/* ============================================================
+   PRICING TABLE
+   ============================================================
+   To update prices, edit the numbers below.
+   Format per vehicle: [exterior, interior, full_detail]
+
+   Example:
+     'Sedan / Coupe': [100, 110, 160]
+     means exterior=$100, interior=$110, full detail=$160
+
+   Do NOT change the vehicle name strings — they must match
+   the HTML option labels exactly.
+   ============================================================ */
+var PRICING_TABLE = {
+  'Sedan / Coupe':              [100, 110, 160],
+  'Sports Car':                 [110, 120, 180],
+  'Midsize SUV / Crossover':    [120, 130, 200],
+  'Full-Size SUV / Minivan':    [135, 145, 230],
+  'Pickup Truck':               [135, 145, 230],
+  // ── Luxury / Specialty pricing ────────────────────────────
+  // TODO: Adjust these prices if needed for specific luxury models.
+  // These reflect the additional care and time required for specialty vehicles.
+  // Do NOT display a price explanation to the customer on-page.
+  // ──────────────────────────────────────────────────────────
+  'Luxury / Specialty Vehicle': [150, 160, 250]
+};
+
+/* ============================================================
+   ADD-ON PRICES
+   Edit the numbers below to change add-on pricing.
+   ============================================================ */
+var ADDON_PRICES = {
+  pet:  65,   // Pet / Dog Hair Removal
+  soil: 60    // Heavy Soil Treatment
+};
+
+/* ============================================================
+   CALCULATOR STATE
+   Persists across steps so Back never loses selections.
+   ============================================================ */
+var STATE = {
+  vehicle:    '',
+  service:    '',
+  serviceIdx: 0,    // 0=exterior, 1=interior, 2=full
+  condition:  '',
+  addons: { pet: false, soil: false },
+  name:       '',
+  phone:      ''
+};
+
+/* ============================================================
+   STEP NAVIGATION
+   ============================================================ */
+function goToStep(n) {
+  if (n === 2 && !STATE.vehicle)   { alert('Please select a vehicle type to continue.'); return; }
+  if (n === 3 && !STATE.service)   { alert('Please select a service to continue.'); return; }
+  if (n === 4 && !STATE.condition) { alert('Please select a vehicle condition to continue.'); return; }
+
+  for (var i = 1; i <= 5; i++) {
+    var stepEl = document.getElementById('qs' + i);
+    var dotEl  = document.getElementById('dot' + i);
+    if (stepEl) stepEl.classList.toggle('active', i === n);
+    if (dotEl) {
+      dotEl.classList.remove('active', 'done');
+      if (i === n)  dotEl.classList.add('active');
+      else if (i < n) dotEl.classList.add('done');
+    }
+  }
+  document.getElementById('quoteCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/* ============================================================
+   SELECTION HANDLERS
+   ============================================================ */
+function deselectSiblings(el) {
+  el.closest('.q-options').querySelectorAll('.q-option').forEach(function(o) {
+    o.classList.remove('selected');
+    o.setAttribute('aria-selected', 'false');
+  });
+}
+
+function selectVehicle(el, vehicle) {
+  deselectSiblings(el);
+  el.classList.add('selected');
+  el.setAttribute('aria-selected', 'true');
+  STATE.vehicle = vehicle;
+}
+
+function selectService(el, service, idx) {
+  deselectSiblings(el);
+  el.classList.add('selected');
+  el.setAttribute('aria-selected', 'true');
+  STATE.service    = service;
+  STATE.serviceIdx = idx;
+}
+
+function selectCondition(el, condition) {
+  deselectSiblings(el);
+  el.classList.add('selected');
+  el.setAttribute('aria-selected', 'true');
+  STATE.condition = condition;
+}
+
+/* Keyboard support for option tiles */
+function optionKey(e, el, type, val, idx) {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    if (type === 'vehicle')   selectVehicle(el, val);
+    if (type === 'service')   selectService(el, val, idx || 0);
+    if (type === 'condition') selectCondition(el, val);
+  }
+}
+
+function toggleAddon(tile, key) {
+  STATE.addons[key] = !STATE.addons[key];
+  var cb = document.getElementById('cb-' + key);
+  if (cb) cb.checked = STATE.addons[key];
+  tile.classList.toggle('selected', STATE.addons[key]);
+}
+
+/* ============================================================
+   QUOTE REVEAL
+   ============================================================ */
+function revealQuote() {
+  var name  = document.getElementById('cf-name').value.trim();
+  var phone = document.getElementById('cf-phone').value.trim();
+  if (!name)  { document.getElementById('cf-name').focus();  alert('Please enter your full name.'); return; }
+  if (!phone) { document.getElementById('cf-phone').focus(); alert('Please enter your mobile number.'); return; }
+  STATE.name  = name;
+  STATE.phone = phone;
+
+  // TODO: Send lead information to CRM/backend before production launch.
+  // Capture: STATE.name, STATE.phone, STATE.vehicle, STATE.service,
+  //          STATE.condition, STATE.addons, calculated total.
+
+  /* Calculate total */
+  var prices = PRICING_TABLE[STATE.vehicle];
+  if (!prices) { alert('Something went wrong. Please refresh and try again.'); return; }
+  var basePrice = prices[STATE.serviceIdx];
+  var total     = basePrice;
+
+  /* Build breakdown */
+  var rows = [];
+  rows.push({ label: STATE.service + ' — ' + STATE.vehicle, value: '$' + basePrice });
+
+  if (STATE.addons.pet) {
+    total += ADDON_PRICES.pet;
+    rows.push({ label: 'Pet / Dog Hair Removal', value: '+$' + ADDON_PRICES.pet });
+  }
+  if (STATE.addons.soil) {
+    total += ADDON_PRICES.soil;
+    rows.push({ label: 'Heavy Soil Treatment', value: '+$' + ADDON_PRICES.soil });
+  }
+
+  /* Show total row only when add-ons are present */
+  var showTotal = STATE.addons.pet || STATE.addons.soil;
+  var breakdownHTML = '';
+  rows.forEach(function(r) {
+    breakdownHTML += '<div class="breakdown-row"><span class="breakdown-label">' + r.label + '</span><span class="breakdown-value">' + r.value + '</span></div>';
+  });
+  if (showTotal) {
+    breakdownHTML += '<div class="breakdown-row total-row"><span class="breakdown-label">Total</span><span class="breakdown-value">$' + total + '</span></div>';
+  }
+
+  /*
+     HEAVY CONDITION WARNING
+     If customer selected Heavy condition but did NOT add Heavy Soil Treatment,
+     show a clear note in the quote. No fee is added automatically.
+     If Heavy Soil Treatment IS selected, the note is omitted (they already paid for it).
+  */
+  if (STATE.condition === 'Heavy' && !STATE.addons.soil) {
+    breakdownHTML += '<p class="condition-note">Heavy vehicle condition noted. Additional labor may be required after inspection.</p>';
+  }
+
+  /* Populate quote display */
+  document.getElementById('qTotal').textContent = '$' + total;
+  document.getElementById('qSub').textContent   = STATE.service + ' · ' + STATE.vehicle + ' · Condition: ' + STATE.condition;
+  document.getElementById('qBreakdown').innerHTML = breakdownHTML;
+
+  /* Build pre-filled SMS message with all customer + quote details */
+  var smsBody =
+    'Hi EZ Elite Detailing, I\u2019d like to book my detail.\n\n' +
+    'Name: '      + STATE.name      + '\n' +
+    'Vehicle: '   + STATE.vehicle   + '\n' +
+    'Service: '   + STATE.service   + '\n' +
+    'Condition: ' + STATE.condition + '\n' +
+    'Quote: $'    + total;
+
+  var smsLink = 'sms:9292705239' + (isMobileDevice() ? '&body=' : '?body=') + encodeURIComponent(smsBody);
+  document.getElementById('btnBookSMS').href = smsLink;
+  document.getElementById('btnTextAlt').href  = smsLink;
+
+  /* Show result, hide contact form */
+  document.getElementById('contactForm').style.display = 'none';
+  document.getElementById('quoteResult').classList.add('show');
+}
+
+/* ============================================================
+   HELPERS
+   ============================================================ */
+function isMobileDevice() {
+  return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
+/* ============================================================
+   RESTART QUOTE
+   ============================================================ */
+function restartQuote() {
+  STATE = { vehicle:'', service:'', serviceIdx:0, condition:'', addons:{pet:false,soil:false}, name:'', phone:'' };
+  document.querySelectorAll('.q-option.selected').forEach(function(el) { el.classList.remove('selected'); el.setAttribute('aria-selected','false'); });
+  document.querySelectorAll('.q-checkbox.selected').forEach(function(el) { el.classList.remove('selected'); });
+  document.querySelectorAll('.q-checkbox input[type=checkbox]').forEach(function(cb) { cb.checked = false; });
+  document.getElementById('cf-name').value  = '';
+  document.getElementById('cf-phone').value = '';
+  document.getElementById('contactForm').style.display = '';
+  document.getElementById('quoteResult').classList.remove('show');
+  goToStep(1);
+}
+
+/* ============================================================
+   FAQ ACCORDION — accessible with aria-expanded
+   ============================================================ */
+function toggleFaq(btn) {
+  var item   = btn.closest('.faq-item');
+  var isOpen = item.classList.contains('open');
+  /* Close all */
+  document.querySelectorAll('.faq-item.open').forEach(function(i) {
+    i.classList.remove('open');
+    i.querySelector('.faq-btn').setAttribute('aria-expanded', 'false');
+  });
+  /* Open if it was closed */
+  if (!isOpen) {
+    item.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+  }
+}
+
+/* ============================================================
+   MOBILE NAV
+   ============================================================ */
+function toggleMenu() {
+  var menu = document.getElementById('mobileMenu');
+  var open = menu.classList.toggle('open');
+  document.querySelector('.nav-hamburger').setAttribute('aria-expanded', String(open));
+}
+function closeMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.querySelector('.nav-hamburger').setAttribute('aria-expanded', 'false');
+}
+document.addEventListener('click', function(e) {
+  var menu = document.getElementById('mobileMenu');
+  var nav  = document.getElementById('nav');
+  if (menu.classList.contains('open') && !nav.contains(e.target) && !menu.contains(e.target)) closeMenu();
+});
+</script>
+
+</body>
+</html>
